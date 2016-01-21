@@ -1,0 +1,6 @@
+package com.kongge;
+message PBUser {
+required string userId = 1;
+optional string nick = 2;
+optional string avatar = 3;
+}
