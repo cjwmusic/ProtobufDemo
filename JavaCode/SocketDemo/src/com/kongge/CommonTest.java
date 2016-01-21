@@ -17,7 +17,8 @@ public class CommonTest {
         System.out.printf("bytes[2] is %X\n" , bytes[2]);
         System.out.printf("bytes[3] is %X\n" , bytes[3]);
 
-
+        int result = Utils.bytes2Int(bytes);
+        System.out.printf("result is %d", result);
 
     }
 

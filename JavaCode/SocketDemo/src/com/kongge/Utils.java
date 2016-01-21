@@ -13,14 +13,15 @@ public class Utils {
         return b;
     }
 
-    public static int bytes2Int(byte[] b, int start, int len) {
-        int sum = 0;
-        int end = start + len;
-        for (int i = start; i < end; i++) {
-            int n = ((int)b[i]) & 0xff;
-            n <<= (--len) * 8;
-            sum += n;
-        }
-        return sum;
+    public static int bytes2Int(byte[] bytes) {
+
+        int value;
+        value = (int) ((bytes[0] & 0xFF)
+                | ((bytes[1] & 0xFF)<<8)
+                | ((bytes[2] & 0xFF)<<16)
+                | ((bytes[3] & 0xFF)<<24));
+        return value;
+
+
     }
 }
